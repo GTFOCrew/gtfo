@@ -7,3 +7,5 @@ public
 *.log
 build
 dist
+temp
+tmp
