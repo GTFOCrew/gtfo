@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "name": "gtfo",
+  "alias": "gtfo",
+  "scope": "gtfo-crew",
+  "trailingSlash": false
+}
