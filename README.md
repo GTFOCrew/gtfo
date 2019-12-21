@@ -1,5 +1,7 @@
-<center>
+<div align="center">
 
-# :fire: gtfo :fire:
+![](https://raw.githubusercontent.com/GTFOCrew/gtfo/master/src/img/gtfo.png)
 
-</center>
+available on [gtfo.now.sh](https://gtfo.now.sh)
+
+</div>
