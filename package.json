@@ -1,0 +1,30 @@
+{
+  "name": "gtfo",
+  "version": "0.0.1",
+  "description": "gtfo",
+  "keywords": [
+    "serverless",
+    "functions",
+    "api",
+    "bot",
+    "telegram",
+    "now",
+    "gtfo"
+  ],
+  "main": "index.html",
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build -d public index.html"
+  },
+  "dependencies": {
+    "lodash": "4.17.15",
+    "telegraf": "3.34.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  }
+}
