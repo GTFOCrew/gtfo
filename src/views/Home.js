@@ -12,7 +12,7 @@ const Home = () => (
     />
 
     <main className='bg-near-black br3 pa3 shadow-2'>
-      check out <Link href='/api/test'>/api/test</Link> !
+      check out <Link href='/api/hi'>/api/hi</Link> !
     </main>
   </section>
 )
