@@ -3,5 +3,8 @@
   "name": "gtfo",
   "alias": "gtfo",
   "scope": "gtfo-crew",
-  "trailingSlash": false
+  "trailingSlash": false,
+  "env": {
+    "BOT_TOKEN": "@bot-token"
+  }
 }
