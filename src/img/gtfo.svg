@@ -1,0 +1,24 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 111.1 111.1"
+>
+  <defs/>
+  <g fill="none">
+
+    <path
+      fill="#111"
+      stroke="#111"
+      stroke-linejoin="round"
+      stroke-width="3.9686999999999997"
+      d="M2 2h0V109H109V2z"
+    />
+
+    <path
+      stroke="#eee"
+      stroke-linecap="round"
+      stroke-width="5.2916"
+      d="M37.7 37.7h0-15.9l-8 31.8h16l4-16h-8m15.9-15.8h15.8m-7.9 0h0l-8 31.8m12 0h0l8-31.8h15.8M57.5 53.6h8m15.9-15.9h0l-8 31.8h15.9l8-31.8zm-59.6 0h75.4"
+    />
+
+  </g>
+</svg>

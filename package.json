@@ -2,6 +2,7 @@
   "name": "gtfo",
   "version": "0.0.1",
   "description": "gtfo",
+  "license": "MIT",
   "keywords": [
     "serverless",
     "functions",
@@ -11,20 +12,46 @@
     "now",
     "gtfo"
   ],
-  "main": "index.html",
+  "scripts": {
+    "start": "parcel src/index.html --open -d public",
+    "build": "parcel build src/index.html -d public",
+    "clean": "rm -rf public .cache"
+  },
+  "main": "src/index.html",
+  "staticFiles": {
+    "staticPath": "static",
+    "watcherGlob": "**"
+  },
   "engines": {
     "node": "12.x"
   },
-  "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build -d public index.html"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "dependencies": {
     "lodash": "4.17.15",
+    "p5": "^0.10.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-p5-wrapper": "^2.0.0",
+    "tachyons": "^4.11.1",
     "telegraf": "3.34.1"
   },
   "devDependencies": {
-    "@babel/core": "7.2.0",
-    "parcel-bundler": "^1.6.1"
+    "@babel/core": "7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "parcel-bundler": "^1.6.1",
+    "parcel-plugin-static-files-copy": "^2.2.1"
   }
 }

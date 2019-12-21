@@ -1,0 +1,14 @@
+body {
+  overflow: hidden;
+  user-select: none;
+}
+
+::selection {
+  color: #111;
+  background: #ffd700;
+}
+
+::-moz-selection {
+  color: #111;
+  background: #ffd700;
+}
