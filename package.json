@@ -14,9 +14,9 @@
   ],
   "scripts": {
     "start": "parcel src/index.html --open -d public",
+    "start:bot": "env-cmd babel-watch -w api/_bot -m '> Restarting bot!' api/_bot/polling-run.js",
     "build": "parcel build src/index.html -d public",
-    "clean": "rm -rf public .cache",
-    "start:bot": "env-cmd babel-watch -w api/_bot -m '> Restarting bot!' api/_bot/polling-run.js"
+    "clean": "rm -rf public .cache"
   },
   "main": "src/index.html",
   "staticFiles": {
