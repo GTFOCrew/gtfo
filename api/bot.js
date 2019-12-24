@@ -12,6 +12,6 @@ bot.start(ctx => ctx.reply('welcome'))
 bot.help(ctx => ctx.reply('send me a sticker'))
 bot.on('sticker', ctx => ctx.reply('👍'))
 bot.hears('yo', ctx => ctx.reply('wassup'))
-bot.hears(/illo/gi, ctx => ctx.reply(_.sample(compliments)))
+bot.hears(/illo/gi, ctx => ctx.reply(_.sample(compliments), { reply_to_message_id: ctx.message.message_id }))
 
 export default bot.webhookCallback('/api/bot')
