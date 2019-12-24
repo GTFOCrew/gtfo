@@ -6,5 +6,5 @@ export default (ctx, next) => {
       ...(opts || {})
     })
 
-  next()
+  return next()
 }
