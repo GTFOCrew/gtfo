@@ -15,7 +15,8 @@
   "scripts": {
     "start": "parcel src/index.html --open -d public",
     "build": "parcel build src/index.html -d public",
-    "clean": "rm -rf public .cache"
+    "clean": "rm -rf public .cache",
+    "start:bot": "env-cmd babel-watch -w api/_bot -m '> Restarting bot!' api/_bot/polling-run.js"
   },
   "main": "src/index.html",
   "staticFiles": {
@@ -55,6 +56,8 @@
     "@babel/plugin-proposal-optional-chaining": "^7.7.5",
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-react": "^7.7.4",
+    "babel-watch": "^7.0.0",
+    "env-cmd": "^10.0.1",
     "parcel-bundler": "^1.6.1",
     "parcel-plugin-static-files-copy": "^2.2.1"
   }
