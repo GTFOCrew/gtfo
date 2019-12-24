@@ -4,6 +4,7 @@
   "alias": "gtfo",
   "scope": "gtfo-crew",
   "trailingSlash": false,
+  "regions": ["bru1", "cdg1", "dub1"],
   "env": {
     "BOT_TOKEN": "@bot-token"
   }
