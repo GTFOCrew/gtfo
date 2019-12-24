@@ -48,14 +48,13 @@ StarfieldBG.defaultProps = {
 export default StarfieldBG
 
 class Star {
-  constructor() {
-    Star.RADIUS = 16
-    Star.MAX_SPEED = 4
-    Star.TRAIL_LENGTH = 16
+  static RADIUS = 16
+  static MAX_SPEED = 4
+  static TRAIL_LENGTH = 16
 
+  constructor() {
     this.reset()
-    this.z = Math.random() * window.innerWidth
-    this.pz = this.z
+    this.z = Math.random() * window.innerWidth - window.innerWidth
   }
 
   reset() {

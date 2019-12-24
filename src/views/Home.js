@@ -1,20 +1,27 @@
 import React from 'react'
-import { Link, StarfieldBG } from '../components'
+import { Container, Link, Paper, StarfieldBG } from '../components'
+import { makeStyles } from '../hooks'
 import gtfoLogo from '../img/gtfo.png'
 
-const Home = () => (
-  <section className='flex flex-column items-center justify-center bg-transparent near-white w-100 min-vh-100 code fw6'>
-    <StarfieldBG bg='#222' fg='#eee' />
+const useStyles = makeStyles({
+  container: 'code fw6',
+  logo:
+    'w4 w5-ns br-pill ba bw2 bw3-ns b--near-white mb4 shadow-2 pointer grow',
+  paper: 'dn db-ns'
+})
 
-    <img
-      src={gtfoLogo}
-      className='w5 br-pill ba bw3 b--near-white mb4 shadow-2 pointer grow'
-    />
+const Home = () => {
+  const styles = useStyles()
 
-    <main className='bg-near-black br3 pa3 shadow-2'>
-      check out <Link href='/api/hi'>/api/hi</Link> !
-    </main>
-  </section>
-)
+  return (
+    <Container fullscreen className={styles.container}>
+      <StarfieldBG bg='#222' fg='#eee' />
+      <img src={gtfoLogo} className={styles.logo} />
+      <Paper elevate className={styles.paper}>
+        check out <Link href='/api/hi'>/api/hi</Link> !
+      </Paper>
+    </Container>
+  )
+}
 
 export default Home
