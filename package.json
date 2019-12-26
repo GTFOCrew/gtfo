@@ -38,6 +38,12 @@
       "last 1 safari version"
     ]
   },
+  "cache": {
+    "disablePlugin": false,
+    "inDev": false,
+    "strategy": "default",
+    "clearDist": true
+  },
   "dependencies": {
     "clsx": "^1.0.4",
     "lodash": "4.17.15",
@@ -59,6 +65,7 @@
     "babel-watch": "^7.0.0",
     "env-cmd": "^10.0.1",
     "parcel-bundler": "^1.6.1",
-    "parcel-plugin-static-files-copy": "^2.2.1"
+    "parcel-plugin-static-files-copy": "^2.2.1",
+    "parcel-plugin-sw-cache": "^0.3.1"
   }
 }
