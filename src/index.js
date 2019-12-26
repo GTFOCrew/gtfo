@@ -8,3 +8,8 @@ import './styles.css'
 render(<Home />, document.querySelector('#app'))
 
 if (module.hot) module.hot.accept()
+
+if ('serviceWorker' in navigator) {
+  const sw = '/sw.js'
+  window.addEventListener('load', () => navigator.serviceWorker.register(sw))
+}

@@ -42,7 +42,8 @@
     "disablePlugin": false,
     "inDev": false,
     "strategy": "default",
-    "clearDist": true
+    "clearDist": true,
+    "navigateFallback": "/"
   },
   "dependencies": {
     "clsx": "^1.0.4",
