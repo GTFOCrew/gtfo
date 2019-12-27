@@ -9,7 +9,7 @@ render(<Home />, document.querySelector('#app'))
 
 if (module.hot) module.hot.accept()
 
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
   const sw = '/sw.js'
   window.addEventListener('load', () => navigator.serviceWorker.register(sw))
 }
