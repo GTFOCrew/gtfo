@@ -28,7 +28,7 @@ install deps
 🤖 **`yarn start:bot`** 🤖<br>
 local development bot
 
-🌐 **`yarn start`** 🌐<br>
+🌠 **`yarn start`** 🌠<br>
 web development server
 
 🚧 **`yarn build`** 🚧<br>
