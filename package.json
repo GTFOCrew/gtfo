@@ -13,7 +13,7 @@
     "gtfo"
   ],
   "scripts": {
-    "start:bot": "env-cmd babel-watch -w api/_bot -m '> Restarting bot' api/_bot/dev.js",
+    "start:bot": "env-cmd babel-watch -w api/_bot -m \"> restarting bot...\" api/_bot/dev.js",
     "start": "parcel src/index.html --open -d public",
     "build": "parcel build src/index.html -d public",
     "clean": "rm -rf public .cache"

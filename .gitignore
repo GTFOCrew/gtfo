@@ -9,6 +9,11 @@ node_modules
 public
 .cache
 *.log
-.env*
 build
 dist
+
+# environment
+.env
+.env.local
+.env.production
+.env.development
