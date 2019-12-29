@@ -20,7 +20,7 @@ and add this line:<br>
 
 <br>
 
-## :computer: scripts :computer:
+## 💻 scripts 💻
 
 🧶 **`yarn`** 🧶<br>
 install deps
