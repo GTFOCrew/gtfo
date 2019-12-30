@@ -1,4 +1,1 @@
-export default (ctx, next) => {
-  ctx.reply('send me a sticker')
-  return next()
-}
+export default ctx => ctx.reply('send me a sticker')

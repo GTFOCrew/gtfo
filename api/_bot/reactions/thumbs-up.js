@@ -1,4 +1,1 @@
-export default (ctx, next) => {
-  ctx.replyMessage('👍')
-  return next()
-}
+export default ctx => ctx.replyMessage('👍')
