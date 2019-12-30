@@ -20,8 +20,11 @@ const Paper = ({ children, className, elevate }) => {
 }
 
 Paper.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
-    .isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+    PropTypes.node
+  ]).isRequired,
   className: PropTypes.string,
   elevate: PropTypes.bool
 }

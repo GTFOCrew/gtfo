@@ -1,6 +1,6 @@
 {
   "name": "gtfo",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "gtfo",
   "license": "MIT",
   "keywords": [
@@ -13,6 +13,7 @@
     "gtfo"
   ],
   "scripts": {
+    "start:bot": "env-cmd babel-watch -w api/_bot -m \"> restarting bot...\" api/_bot/dev.js",
     "start": "parcel src/index.html --open -d public",
     "build": "parcel build src/index.html -d public",
     "clean": "rm -rf public .cache"
@@ -37,6 +38,13 @@
       "last 1 safari version"
     ]
   },
+  "cache": {
+    "disablePlugin": false,
+    "inDev": false,
+    "strategy": "default",
+    "clearDist": true,
+    "navigateFallback": "/"
+  },
   "dependencies": {
     "clsx": "^1.0.4",
     "lodash": "4.17.15",
@@ -55,7 +63,10 @@
     "@babel/plugin-proposal-optional-chaining": "^7.7.5",
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-react": "^7.7.4",
-    "parcel-bundler": "^1.6.1",
-    "parcel-plugin-static-files-copy": "^2.2.1"
+    "babel-watch": "^7.0.0",
+    "env-cmd": "^10.0.1",
+    "parcel-bundler": "^1.11.0",
+    "parcel-plugin-static-files-copy": "^2.2.1",
+    "parcel-plugin-sw-cache": "^0.3.1"
   }
 }
