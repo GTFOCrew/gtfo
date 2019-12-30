@@ -12,7 +12,7 @@ if (process.env.NODE_ENV !== 'production') {
 bot.use(replyMessage)
 bot.start(start)
 bot.help(help)
-bot.hears(/illo/gi, compliment)
+bot.hears(/(^|\s)illo/gimu, compliment)
 bot.on('sticker', thumbsUp)
 
 export default bot
