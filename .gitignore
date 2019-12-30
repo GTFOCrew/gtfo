@@ -1,13 +1,19 @@
+# common
 .DS_Store
 thumbs.db
+temp
+tmp
 
+# project
 node_modules
 public
 .cache
 *.log
 build
 dist
-temp
-tmp
 
-.env*
+# environment
+.env
+.env.local
+.env.production
+.env.development

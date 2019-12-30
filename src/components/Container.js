@@ -22,8 +22,11 @@ const Container = ({ children, className, fullscreen }) => {
 }
 
 Container.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
-    .isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.string,
+    PropTypes.node
+  ]).isRequired,
   className: PropTypes.string,
   fullscreen: PropTypes.bool
 }

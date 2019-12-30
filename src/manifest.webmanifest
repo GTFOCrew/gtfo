@@ -1,0 +1,16 @@
+{
+  "short_name": "GTFO",
+  "name": "GTFO",
+  "description": "By the GTFO Crew",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#222",
+  "background_color": "#222",
+  "icons": [
+    {
+      "src": "img/gtfo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

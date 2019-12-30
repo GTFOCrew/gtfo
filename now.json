@@ -6,6 +6,7 @@
   "trailingSlash": false,
   "regions": ["bru1", "cdg1", "dub1"],
   "env": {
-    "BOT_TOKEN": "@bot-token"
+    "BOT_TOKEN": "@bot-token",
+    "BOT_TOKEN_DEV": "@bot-token-dev"
   }
 }
