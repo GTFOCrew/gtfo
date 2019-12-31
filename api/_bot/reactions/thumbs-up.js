@@ -1,1 +1,1 @@
-export default ctx => ctx.replyMessage('👍')
+export default ctx => ctx.replyTo('👍')
