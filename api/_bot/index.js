@@ -1,6 +1,6 @@
 import Telegraf from 'telegraf'
 import { help, start } from './commands'
-import { debug, error, replyTo } from './middleware'
+import { debug, error, replyMessage } from './middleware'
 import { compliment, thumbsUp } from './reactions'
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
@@ -12,7 +12,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 // middleware
 bot.catch(error)
-bot.use(replyTo)
+bot.use(replyMessage)
 
 // commands
 bot.start(start)
