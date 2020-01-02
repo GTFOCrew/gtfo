@@ -1,5 +1,5 @@
 import Telegraf from 'telegraf'
-import { help, start } from './commands'
+import { help, start, arkangel } from './commands'
 import { debug, error, replyMessage } from './middleware'
 import { compliment, thumbsUp } from './reactions'
 
@@ -20,6 +20,7 @@ bot.help(help)
 
 // reactions
 bot.hears(/\billo\b/gi, compliment)
+bot.command('arkangel', arkangel)
 bot.on('sticker', thumbsUp)
 
 export default bot
