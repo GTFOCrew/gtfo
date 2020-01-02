@@ -1,6 +1,6 @@
 import Telegraf from 'telegraf'
-import { help, start, arkangel } from './commands'
-import { debug, error, replyMessage } from './middleware'
+import { help, start, arkangel, eqSolver } from './commands'
+import { argParser, debug, error, replyMessage } from './middleware'
 import { compliment, thumbsUp } from './reactions'
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
@@ -13,7 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
 // middleware
 bot.catch(error)
 bot.use(replyMessage)
-
+bot.use(argParser)
 // commands
 bot.start(start)
 bot.help(help)
@@ -21,6 +21,7 @@ bot.help(help)
 // reactions
 bot.hears(/\billo\b/gi, compliment)
 bot.command('arkangel', arkangel)
+bot.command('solve', eqSolver)
 bot.on('sticker', thumbsUp)
 
 export default bot
