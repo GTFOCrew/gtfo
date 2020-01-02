@@ -12,6 +12,9 @@ public
 build
 dist
 
+# mierda de intelij de los cojones
+.idea/
+
 # environment
 .env
 .env.local
