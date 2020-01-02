@@ -1,18 +1,25 @@
 import Telegraf from 'telegraf'
-import { debug, replyMessage } from './middlewares'
 import { help, start } from './commands'
+import { debug, error, replyMessage } from './middleware'
 import { compliment, thumbsUp } from './reactions'
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
+// development middleware
 if (process.env.NODE_ENV !== 'production') {
   bot.use(debug)
 }
 
+// middleware
+bot.catch(error)
 bot.use(replyMessage)
+
+// commands
 bot.start(start)
 bot.help(help)
-bot.hears(/(^|\s)illo/gimu, compliment)
+
+// reactions
+bot.hears(/\billo\b/gi, compliment)
 bot.on('sticker', thumbsUp)
 
 export default bot
