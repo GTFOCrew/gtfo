@@ -1,7 +1,8 @@
 // https://larsgraubner.com/telegraf-middleware-command-arguments/
 export default (ctx, next) => {
   if (ctx.updateType === 'message') {
-    const text = ctx.update.message.text?.toLowerCase()
+    const text =
+      ctx.update.message.text && ctx.update.message.text.toLowerCase()
     if (text && text.startsWith('/')) {
       const match = text.match(/^\/([^\s]+)\s?(.+)?/)
       let args = []
