@@ -14,14 +14,15 @@ if (process.env.NODE_ENV !== 'production') {
 bot.catch(error)
 bot.use(replyMessage)
 bot.use(argParser)
+
 // commands
 bot.start(start)
 bot.help(help)
+bot.command('arkangel', arkangel)
+bot.command('solve', eqSolver)
 
 // reactions
 bot.hears(/\billo\b/gi, compliment)
-bot.command('arkangel', arkangel)
-bot.command('solve', eqSolver)
 bot.on('sticker', thumbsUp)
 
 export default bot
