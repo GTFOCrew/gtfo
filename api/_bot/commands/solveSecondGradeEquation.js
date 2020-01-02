@@ -17,7 +17,7 @@ export default ctx => {
         c
       )}=0 and its solution is x=${c / b}`
     )
-  } else if (b === 0 && c !== 0) {
+  } else if (a === 0 && b === 0 && c !== 0) {
     return ctx.replyMessage(`Bro wtf`)
   } else if (c === 0) {
     return ctx.replyMessage(`Bro you kidding, x=0 it's trivial...`)
@@ -43,6 +43,10 @@ export default ctx => {
 }
 
 const computeSolution = (a, b, c) => {
+  if (b === 0) {
+    const sol = Math.sqrt(c / a)
+    return { sol1: sol, sol2: -sol }
+  }
   const sqrt = Math.sqrt(b * b - 4 * a * c)
   if (isNaN(sqrt)) {
     return computeImaginarySolution(a, b, c)
