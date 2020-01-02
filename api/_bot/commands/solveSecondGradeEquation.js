@@ -19,7 +19,7 @@ export default ctx => {
     )
   } else if (b === 0 && c !== 0) {
     return ctx.replyMessage(`Bro wtf`)
-  } else {
+  } else if (c === 0) {
     return ctx.replyMessage(`Bro you kidding, x=0 it's trivial...`)
   }
 
