@@ -11,6 +11,10 @@ export default ctx => {
   const b = parseFloat(args[1])
   const c = parseFloat(args[2])
 
+  if (isNaN(a) || isNaN(b) || isNaN(c)) {
+    return ctx.replyMessage('Bro wtf, please provide a decent input lol')
+  }
+
   if (a === 0 && b !== 0) {
     return ctx.replyMessage(
       `This is a 1st grade equation ${returnString(b)}x${returnString(
