@@ -65,7 +65,7 @@ const returnString = solution => {
 const computeImaginarySolution = (a, b, c) => {
   const sqrt = Math.sqrt(Math.abs(b * b - 4 * a * c))
   const solution = { sol1: -b / (2 * a), sol2: -b / (2 * a) }
-  const imaginarySolution = { sol1: (sqrt / 2) * a, sol2: (-sqrt / 2) * a }
+  const imaginarySolution = { sol1: sqrt / (2 * a), sol2: -sqrt / (2 * a) }
   return {
     sol1: `${solution.sol1}${returnString(imaginarySolution.sol1)}i`,
     sol2: `${solution.sol2}${returnString(imaginarySolution.sol2)}i`
