@@ -1,13 +1,13 @@
 import fs from 'fs'
+import { data } from '../fn'
 
 // adapted from https://github.com/telegraf/telegraf/issues/29
-export default async ctx => {
-  return ctx.replyWithVoice(
+export default async ctx =>
+  ctx.replyWithVoice(
     {
-      source: await fs.promises.readFile(`${__dirname}/../data/arkangel.opus`)
+      source: await fs.promises.readFile(data('audio/arkangel.opus'))
     },
     {
       reply_to_message_id: ctx.message.message_id
     }
   )
-}
