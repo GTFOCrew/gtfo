@@ -12,13 +12,13 @@ export default (ctx, next) => {
     const raw = ctx.update.message.text && ctx.update.message.text.toLowerCase()
 
     if (raw && raw.startsWith('/')) {
-      const match = raw.match(/^\/([^\s]+)\s?(.+)?/)
+      const match = raw.match(/^\/([^\s]+)\s*(.+)?/)
       let args = []
       let command
 
       if (match !== null) {
         if (match[1]) command = match[1]
-        if (match[2]) args = match[2].split(' ')
+        if (match[2]) args = match[2].split(/\s+/)
       }
 
       ctx.state.command = {
