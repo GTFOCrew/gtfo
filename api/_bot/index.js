@@ -1,5 +1,5 @@
 import Telegraf from 'telegraf'
-import { help, start, arkangel, eqSolver } from './commands'
+import { help, start, arkangel, eqSolver, quote } from './commands'
 import { argParser, debug, error, replyMessage } from './middleware'
 import { compliment, thumbsUp } from './reactions'
 
@@ -20,6 +20,7 @@ bot.start(start)
 bot.help(help)
 bot.command('arkangel', arkangel)
 bot.command('solve', eqSolver)
+bot.command('quotes', quote)
 
 // reactions
 bot.hears(/\billo\b/gi, compliment)
