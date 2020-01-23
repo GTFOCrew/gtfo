@@ -61,20 +61,17 @@
     "react-dom": "^16.12.0",
     "react-p5-wrapper": "^2.0.0",
     "tachyons": "^4.11.1",
-    "telegraf": "3.34.1"
+    "telegraf": "3.35.0"
   },
   "devDependencies": {
-    "@babel/core": "7.7.7",
-    "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.7.4",
-    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
-    "@babel/preset-env": "^7.7.7",
-    "@babel/preset-react": "^7.7.4",
+    "@babel/core": "7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
     "babel-watch": "^7.0.0",
     "env-cmd": "^10.0.1",
-    "husky": "^3.1.0",
+    "husky": "^4.0.10",
     "parcel-bundler": "^1.11.0",
-    "parcel-plugin-static-files-copy": "^2.2.1",
+    "parcel-plugin-static-files-copy": "^2.2.2",
     "parcel-plugin-sw-cache": "^0.3.1",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1"
