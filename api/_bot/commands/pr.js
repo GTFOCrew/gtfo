@@ -1,11 +1,10 @@
 import fs from 'fs'
 import { data } from '../fn'
 
-// adapted from https://github.com/telegraf/telegraf/issues/29
 export default async ctx =>
-  ctx.replyWithVoice(
+  ctx.replyWithPhoto(
     {
-      source: await fs.promises.readFile(data('audio/arkangel.opus'))
+      source: await fs.promises.readFile(data('img/pr.jpg'))
     },
     {
       reply_to_message_id: ctx.message.message_id
