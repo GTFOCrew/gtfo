@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "clsx": "^1.0.4",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "mathjax-node-svg2png": "^2.0.0",
     "nerdamer": "^1.1.2",
     "p5": "^0.10.2",
