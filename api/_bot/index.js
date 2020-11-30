@@ -26,6 +26,6 @@ bot.command('solve', solve)
 
 // reactions
 bot.hears(/\billo\b/gi, compliment)
-bot.on('sticker', thumbsUp)
+// bot.on('sticker', thumbsUp)
 
 export default bot
