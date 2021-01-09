@@ -1,7 +1,7 @@
 import Telegraf from 'telegraf'
-import { arkangel, help, pr, quote, solve, start } from './commands'
+import { arkangel, help, math, pr, quote, solve, start } from './commands'
 import { argParser, debug, error, replyMessage } from './middleware'
-import { compliment, thumbsUp } from './reactions'
+import { compliment } from './reactions'
 
 const bot = new Telegraf(process.env.BOT_TOKEN)
 
@@ -19,7 +19,7 @@ bot.use(argParser)
 bot.start(start)
 bot.help(help)
 bot.command('arkangel', arkangel)
-// bot.command('math', math) // TODO investigate why does not work on vercel
+bot.command('math', math)
 bot.command('pr', pr)
 bot.command('quote', quote)
 bot.command('solve', solve)
