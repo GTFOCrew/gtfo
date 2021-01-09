@@ -6,4 +6,4 @@ const helpMessage = `GTFO Bot Commands:
 /quote - get a random quote
 /solve a b c - quadratic equation solver`
 
-export default ctx => ctx.replyMessage(helpMessage)
+export default (ctx) => ctx.replyMessage(helpMessage)

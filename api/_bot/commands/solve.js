@@ -1,4 +1,4 @@
-export default ctx => {
+export default (ctx) => {
   const args = ctx.state.command.args
 
   if (args.length < 3) {
@@ -61,7 +61,7 @@ const computeSolution = (a, b, c) => {
   return { sol1: (-b + sqrt) / (2 * a), sol2: (-b - sqrt) / (2 * a) }
 }
 
-const withSign = solution => (solution > 0 ? `+${solution}` : `${solution}`)
+const withSign = (solution) => (solution > 0 ? `+${solution}` : `${solution}`)
 
 const computeImaginarySolution = (a, b, c) => {
   const sqrt = Math.sqrt(Math.abs(b * b - 4 * a * c))

@@ -7,7 +7,7 @@ mathjax.config({
 
 mathjax.start()
 
-export default async ctx => {
+export default async (ctx) => {
   const result = await mathjax.typeset({
     math: nerdamer(ctx.state.command.args.join(' ')).toTeX(),
     format: 'TeX',

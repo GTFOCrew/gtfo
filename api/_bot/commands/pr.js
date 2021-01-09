@@ -1,7 +1,7 @@
 import fs from 'fs'
 import { data } from '../fn'
 
-export default async ctx =>
+export default async (ctx) =>
   ctx.replyWithPhoto(
     {
       source: await fs.promises.readFile(data('img/pr.jpg'))

@@ -2,7 +2,7 @@ import fs from 'fs'
 import { data } from '../fn'
 
 // adapted from https://github.com/telegraf/telegraf/issues/29
-export default async ctx =>
+export default async (ctx) =>
   ctx.replyWithVoice(
     {
       source: await fs.promises.readFile(data('audio/arkangel.opus'))
