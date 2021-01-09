@@ -1,5 +1,5 @@
 import Telegraf from 'telegraf'
-import { help, start, arkangel, eqSolver, quote } from './commands'
+import { arkangel, help, pr, quote, solve, start } from './commands'
 import { argParser, debug, error, replyMessage } from './middleware'
 import { compliment, thumbsUp } from './reactions'
 
@@ -19,11 +19,13 @@ bot.use(argParser)
 bot.start(start)
 bot.help(help)
 bot.command('arkangel', arkangel)
-bot.command('solve', eqSolver)
-bot.command('quotes', quote)
+// bot.command('math', math) // TODO investigate why does not work on vercel
+bot.command('pr', pr)
+bot.command('quote', quote)
+bot.command('solve', solve)
 
 // reactions
 bot.hears(/\billo\b/gi, compliment)
-bot.on('sticker', thumbsUp)
+// bot.on('sticker', thumbsUp) // NOTE removed by popular request
 
 export default bot
