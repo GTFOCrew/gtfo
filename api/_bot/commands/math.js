@@ -47,7 +47,7 @@ export default async (ctx) => {
     const image = sharp(Buffer.from(data, 'utf-8'))
     const pngData = await image.png().toBuffer()
 
-    ctx.replyWithPhoto(
+    return ctx.replyWithPhoto(
       {
         source: pngData
       },
