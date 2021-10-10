@@ -16,14 +16,15 @@
     "start:bot": "env-cmd babel-watch -w api/_bot -m \"> restarting bot...\" api/_bot/dev.js",
     "start": "parcel src/index.html --open --dist-dir public",
     "build": "parcel build src/index.html --dist-dir public",
-    "clean": "rm -rf public .cache .parcel-cache"
+    "clean": "rm -rf public .cache .parcel-cache",
+    "prepare": "husky install"
   },
   "staticFiles": {
     "staticPath": "static",
     "watcherGlob": "**"
   },
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "browserslist": {
     "production": [
@@ -37,11 +38,6 @@
       "last 1 safari version"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "dependencies": {
     "clsx": "^1.0.4",
     "lodash": "^4.17.20",
@@ -52,9 +48,9 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-p5-wrapper": "^2.0.0",
-    "sharp": "^0.27.0",
+    "sharp": "^0.29.1",
     "tachyons": "^4.11.1",
-    "telegraf": "^3.38.0"
+    "telegraf": "^4.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -66,7 +62,7 @@
     "@parcel/transformer-webmanifest": "2.0.0-rc.0",
     "babel-watch": "^7.0.0",
     "env-cmd": "^10.0.1",
-    "husky": "^4.0.10",
+    "husky": "^7.0.0",
     "parcel": "^2.0.0-rc.0",
     "parcel-plugin-static-files-copy": "^2.2.2",
     "prettier": "^2.2.1",
