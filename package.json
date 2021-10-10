@@ -14,11 +14,10 @@
   ],
   "scripts": {
     "start:bot": "env-cmd babel-watch -w api/_bot -m \"> restarting bot...\" api/_bot/dev.js",
-    "start": "parcel src/index.html --open -d public",
-    "build": "parcel build src/index.html -d public",
-    "clean": "rm -rf public .cache"
+    "start": "parcel src/index.html --open --dist-dir public",
+    "build": "parcel build src/index.html --dist-dir public",
+    "clean": "rm -rf public .cache .parcel-cache"
   },
-  "main": "src/index.html",
   "staticFiles": {
     "staticPath": "static",
     "watcherGlob": "**"
@@ -37,13 +36,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "cache": {
-    "disablePlugin": false,
-    "inDev": false,
-    "strategy": "default",
-    "clearDist": true,
-    "navigateFallback": "/"
   },
   "husky": {
     "hooks": {
@@ -68,12 +60,15 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.8.3",
+    "@parcel/packager-raw-url": "2.0.0-rc.0",
+    "@parcel/service-worker": "^2.0.0-nightly.2448",
+    "@parcel/transformer-image": "2.0.0-rc.0",
+    "@parcel/transformer-webmanifest": "2.0.0-rc.0",
     "babel-watch": "^7.0.0",
     "env-cmd": "^10.0.1",
     "husky": "^4.0.10",
-    "parcel-bundler": "^1.11.0",
+    "parcel": "^2.0.0-rc.0",
     "parcel-plugin-static-files-copy": "^2.2.2",
-    "parcel-plugin-sw-cache": "^0.3.1",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0"
   }
