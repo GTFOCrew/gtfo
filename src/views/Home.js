@@ -1,12 +1,12 @@
 import React from 'react'
 import { Container, Link, Paper, StarfieldBG } from '../components'
 import { makeStyles } from '../hooks'
-import gtfoLogo from '../img/gtfo.png'
+
+const gtfoLogo = new URL('../img/gtfo.png', import.meta.url).toString()
 
 const useStyles = makeStyles({
   container: 'code fw6',
-  logo:
-    'w4 w5-ns br-pill ba bw2 bw3-ns b--near-white mb4 shadow-2 pointer grow',
+  logo: 'w4 w5-ns br-pill ba bw2 bw3-ns b--near-white mb4 shadow-2 pointer grow',
   paper: 'dn db-ns'
 })
 
