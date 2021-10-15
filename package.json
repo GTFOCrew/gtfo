@@ -28,9 +28,10 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      ">1%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "not ie <= 11"
     ],
     "development": [
       "last 1 chrome version",
@@ -53,17 +54,17 @@
     "telegraf": "^4.4.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "@babel/preset-react": "^7.8.3",
-    "@parcel/packager-raw-url": "2.0.0-rc.0",
-    "@parcel/service-worker": "^2.0.0-nightly.2448",
-    "@parcel/transformer-image": "2.0.0-rc.0",
-    "@parcel/transformer-webmanifest": "2.0.0-rc.0",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@parcel/core": "^2.0.0",
+    "@parcel/packager-raw-url": "^2.0.0",
+    "@parcel/service-worker": "^2.0.0",
+    "@parcel/transformer-image": "^2.0.0",
+    "@parcel/transformer-webmanifest": "^2.0.0",
     "babel-watch": "^7.0.0",
     "env-cmd": "^10.0.1",
     "husky": "^7.0.0",
-    "parcel": "^2.0.0-rc.0",
+    "parcel": "^2.0.0",
     "parcel-plugin-static-files-copy": "^2.2.2",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0"
