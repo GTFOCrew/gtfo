@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import P5 from 'react-p5-wrapper'
+import { ReactP5Wrapper as P5 } from 'react-p5-wrapper'
 import { debounce } from '../fn'
 
 const StarfieldBG = React.memo(({ stars, bg, fg, trail }) => (
   <P5
-    sketch={p5 => {
-      let _stars = new Array(stars).fill(null).map(() => new Star())
+    sketch={(p5) => {
+      const _stars = new Array(stars).fill(null).map(() => new Star())
 
       p5.setup = () => {
-        let canvas = p5.createCanvas(
+        const canvas = p5.createCanvas(
           window.innerWidth + 1,
           window.innerHeight + 1
         )
@@ -21,7 +21,7 @@ const StarfieldBG = React.memo(({ stars, bg, fg, trail }) => (
       p5.draw = () => {
         p5.background(bg)
         p5.translate(window.innerWidth / 2, window.innerHeight / 2)
-        _stars.forEach(s => s.draw(p5, fg, trail))
+        _stars.forEach((s) => s.draw(p5, fg, trail))
       }
 
       p5.windowResized = debounce(() => {

@@ -14,23 +14,24 @@
   ],
   "scripts": {
     "start:bot": "env-cmd babel-watch -w api/_bot -m \"> restarting bot...\" api/_bot/dev.js",
-    "start": "parcel src/index.html --open -d public",
-    "build": "parcel build src/index.html -d public",
-    "clean": "rm -rf public .cache"
+    "start": "parcel src/index.html --open --dist-dir public",
+    "build": "parcel build src/index.html --dist-dir public",
+    "clean": "rm -rf public .cache .parcel-cache",
+    "prepare": "husky install"
   },
-  "main": "src/index.html",
   "staticFiles": {
     "staticPath": "static",
     "watcherGlob": "**"
   },
   "engines": {
-    "node": "12.x"
+    "node": "14.x"
   },
   "browserslist": {
     "production": [
-      ">0.2%",
+      ">1%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "not ie <= 11"
     ],
     "development": [
       "last 1 chrome version",
@@ -38,42 +39,33 @@
       "last 1 safari version"
     ]
   },
-  "cache": {
-    "disablePlugin": false,
-    "inDev": false,
-    "strategy": "default",
-    "clearDist": true,
-    "navigateFallback": "/"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "dependencies": {
     "clsx": "^1.0.4",
     "lodash": "^4.17.20",
     "mathjax": "^3.1.2",
     "nerdamer": "^1.1.2",
-    "p5": "^0.10.2",
+    "p5": "^1.4.0",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-p5-wrapper": "^2.0.0",
-    "sharp": "^0.27.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-p5-wrapper": "^3.0.2",
+    "sharp": "^0.29.1",
     "tachyons": "^4.11.1",
-    "telegraf": "^3.38.0"
+    "telegraf": "^4.4.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.11",
-    "@babel/preset-react": "^7.8.3",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@parcel/core": "^2.0.0",
+    "@parcel/packager-raw-url": "^2.0.0",
+    "@parcel/service-worker": "^2.0.0",
+    "@parcel/transformer-image": "^2.0.0",
+    "@parcel/transformer-webmanifest": "^2.0.0",
     "babel-watch": "^7.0.0",
     "env-cmd": "^10.0.1",
-    "husky": "^4.0.10",
-    "parcel-bundler": "^1.11.0",
+    "husky": "^7.0.0",
+    "parcel": "^2.0.0",
     "parcel-plugin-static-files-copy": "^2.2.2",
-    "parcel-plugin-sw-cache": "^0.3.1",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0"
   }
