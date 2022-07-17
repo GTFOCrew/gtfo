@@ -66,6 +66,7 @@
     "husky": "^7.0.0",
     "parcel": "^2.0.0",
     "parcel-plugin-static-files-copy": "^2.2.2",
+    "parcel-transformer-fix-star": "link:./parcel-transformer-fix-star",
     "prettier": "^2.2.1",
     "pretty-quick": "^3.1.0"
   }

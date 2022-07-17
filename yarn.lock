@@ -2822,6 +2822,10 @@ parcel-plugin-static-files-copy@^2.2.2:
     minimatch "3.0.4"
     path "0.12.7"
 
+"parcel-transformer-fix-star@link:./parcel-transformer-fix-star":
+  version "0.0.0"
+  uid ""
+
 parcel@^2.0.0:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/parcel/-/parcel-2.6.2.tgz#4585208880f42b24935c7d3ad167dcd42f8174eb"
