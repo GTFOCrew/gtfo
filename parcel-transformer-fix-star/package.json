@@ -1,0 +1,10 @@
+{
+  "name": "parcel-transformer-fix-star",
+  "version": "1.0.0",
+  "main": "fix-star.js",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "parcel": "^2.0.0"
+  }
+}

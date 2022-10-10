@@ -1,6 +1,6 @@
 export { default as arkangel } from './arkangel'
 export { default as help } from './help'
-// export { default as math } from './math'
+export { default as math } from './math'
 export { default as pr } from './pr'
 export { default as quote } from './quote'
 export { default as solve } from './solve'

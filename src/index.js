@@ -10,6 +10,8 @@ render(<Home />, document.querySelector('#app'))
 if (module.hot) module.hot.accept()
 
 if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
-  const sw = '/sw.js'
-  window.addEventListener('load', () => navigator.serviceWorker.register(sw))
+  const sw = new URL('service-worker.js', import.meta.url)
+  window.addEventListener('load', () =>
+    navigator.serviceWorker.register(sw, { type: 'module' })
+  )
 }

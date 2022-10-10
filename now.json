@@ -5,8 +5,9 @@
   "scope": "gtfo-crew",
   "trailingSlash": false,
   "regions": ["cdg1"],
-  "env": {
-    "BOT_TOKEN": "@bot-token",
-    "BOT_TOKEN_DEV": "@bot-token-dev"
+  "functions": {
+    "api/bot.js": {
+      "includeFiles": "node_modules/mathjax/**"
+    }
   }
 }
