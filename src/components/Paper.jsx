@@ -1,9 +1,8 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 import { makeStyles } from '../hooks'
 
-const useStyles = makeStyles(({ elevate, className }) => ({
+const useStyles = makeStyles(({ elevate = false, className }) => ({
   paper: clsx(
     'near-white',
     'bg-near-black',
@@ -27,10 +26,6 @@ Paper.propTypes = {
   ]).isRequired,
   className: PropTypes.string,
   elevate: PropTypes.bool
-}
-
-Paper.defaultProps = {
-  elevate: false
 }
 
 export default Paper

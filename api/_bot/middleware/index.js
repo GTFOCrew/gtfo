@@ -1,4 +1,4 @@
-export { default as argParser } from './arg-parser'
-export { default as debug } from './debug'
-export { default as error } from './error'
-export { default as replyMessage } from './reply-message'
+export { default as argParser } from './arg-parser.js'
+export { default as debug } from './debug.js'
+export { default as error } from './error.js'
+export { default as replyMessage } from './reply-message.js'

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Container, Link, Paper, StarfieldBG } from '../components'
 import { makeStyles } from '../hooks'
 

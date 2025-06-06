@@ -6,7 +6,6 @@ tmp
 
 # project
 node_modules
-public
 .cache
 .parcel-cache
 *.log

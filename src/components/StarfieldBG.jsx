@@ -1,48 +1,43 @@
-import React from 'react'
+import { ReactP5Wrapper as P5 } from '@p5-wrapper/react'
+import { memo } from 'react'
 import PropTypes from 'prop-types'
-import { ReactP5Wrapper as P5 } from 'react-p5-wrapper'
 import { debounce } from '../fn'
 
-const StarfieldBG = React.memo(({ stars, bg, fg, trail }) => (
-  <P5
-    sketch={(p5) => {
-      const _stars = new Array(stars).fill(null).map(() => new Star())
+const StarfieldBG = memo(
+  ({ stars = 400, bg = '#111', fg = '#eee', trail = false }) => (
+    <P5
+      sketch={(p5) => {
+        const _stars = new Array(stars).fill(null).map(() => new Star())
 
-      p5.setup = () => {
-        const canvas = p5.createCanvas(
-          window.innerWidth + 1,
-          window.innerHeight + 1
-        )
+        p5.setup = () => {
+          const canvas = p5.createCanvas(
+            window.innerWidth + 1,
+            window.innerHeight + 1
+          )
 
-        canvas.position(0, 0)
-        canvas.style('z-index', '-1')
-      }
+          canvas.position(0, 0)
+          canvas.style('z-index', '-1')
+        }
 
-      p5.draw = () => {
-        p5.background(bg)
-        p5.translate(window.innerWidth / 2, window.innerHeight / 2)
-        _stars.forEach((s) => s.draw(p5, fg, trail))
-      }
+        p5.draw = () => {
+          p5.background(bg)
+          p5.translate(window.innerWidth / 2, window.innerHeight / 2)
+          _stars.forEach((s) => s.draw(p5, fg, trail))
+        }
 
-      p5.windowResized = debounce(() => {
-        p5.resizeCanvas(window.innerWidth, window.innerHeight)
-      }, 500)
-    }}
-  />
-))
+        p5.windowResized = debounce(() => {
+          p5.resizeCanvas(window.innerWidth, window.innerHeight)
+        }, 500)
+      }}
+    />
+  )
+)
 
 StarfieldBG.propTypes = {
   stars: PropTypes.number,
   bg: PropTypes.string,
   fg: PropTypes.string,
   trail: PropTypes.bool
-}
-
-StarfieldBG.defaultProps = {
-  stars: 400,
-  bg: '#111',
-  fg: '#eee',
-  trail: false
 }
 
 export default StarfieldBG

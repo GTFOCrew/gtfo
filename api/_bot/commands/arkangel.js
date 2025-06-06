@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { data } from '../fn'
+import { data } from '../fn.js'
 
 // adapted from https://github.com/telegraf/telegraf/issues/29
 export default async (ctx) =>
