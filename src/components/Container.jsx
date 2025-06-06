@@ -1,9 +1,8 @@
-import React from 'react'
 import PropTypes from 'prop-types'
-import clsx from 'clsx'
+import { clsx } from 'clsx'
 import { makeStyles } from '../hooks'
 
-const useStyles = makeStyles(({ fullscreen, className }) => ({
+const useStyles = makeStyles(({ fullscreen = false, className }) => ({
   container: clsx(
     'flex',
     'flex-column',
@@ -29,10 +28,6 @@ Container.propTypes = {
   ]).isRequired,
   className: PropTypes.string,
   fullscreen: PropTypes.bool
-}
-
-Container.defaultProps = {
-  fullscreen: false
 }
 
 export default Container

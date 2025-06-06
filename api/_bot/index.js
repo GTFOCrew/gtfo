@@ -1,7 +1,15 @@
 import { Telegraf } from 'telegraf'
-import { arkangel, help, math, pr, quote, solve, start } from './commands'
-import { argParser, debug, error, replyMessage } from './middleware'
-import { compliment } from './reactions'
+import {
+  arkangel,
+  help,
+  math,
+  pr,
+  quote,
+  solve,
+  start
+} from './commands/index.js'
+import { argParser, debug, error, replyMessage } from './middleware/index.js'
+import { compliment } from './reactions/index.js'
 
 const createBot = (botToken) => {
   const bot = new Telegraf(botToken)

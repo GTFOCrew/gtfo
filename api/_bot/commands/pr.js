@@ -1,5 +1,5 @@
 import fs from 'fs'
-import { data } from '../fn'
+import { data } from '../fn.js'
 
 export default async (ctx) =>
   ctx.replyWithPhoto(

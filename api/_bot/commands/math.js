@@ -1,4 +1,4 @@
-import nerdamer from 'nerdamer/all'
+import nerdamer from 'nerdamer/all.js'
 import mathjax from 'mathjax'
 import sharp from 'sharp'
 

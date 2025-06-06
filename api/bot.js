@@ -1,5 +1,4 @@
-import createBot from './_bot'
-import domains from './_bot/domains'
+import createBot from './_bot/index.js'
 
 export default (req, res) => {
   const bot = createBot(process.env.BOT_TOKEN)

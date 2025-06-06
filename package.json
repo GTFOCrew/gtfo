@@ -1,6 +1,6 @@
 {
   "name": "gtfo",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "gtfo",
   "license": "MIT",
   "keywords": [
@@ -9,22 +9,18 @@
     "api",
     "bot",
     "telegram",
-    "now",
+    "vercel",
     "gtfo"
   ],
+  "type": "module",
   "scripts": {
-    "start:bot": "env-cmd babel-watch -w api/_bot -m \"> restarting bot...\" api/_bot/dev.js",
-    "start": "parcel src/index.html --open --dist-dir public",
-    "build": "parcel build src/index.html --dist-dir public",
-    "clean": "rm -rf public .cache .parcel-cache",
-    "prepare": "husky install"
-  },
-  "staticFiles": {
-    "staticPath": "static",
-    "watcherGlob": "**"
+    "start:bot": "node --env-file-if-exists .env --watch ./api/_bot/dev.js",
+    "start": "vite",
+    "build": "vite build",
+    "prepare": "husky"
   },
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
   },
   "browserslist": {
     "production": [
@@ -40,34 +36,23 @@
     ]
   },
   "dependencies": {
-    "clsx": "^1.0.4",
+    "@p5-wrapper/react": "^4.0.0",
+    "clsx": "^2.0.0",
     "lodash": "^4.17.20",
     "mathjax": "^3.1.2",
     "nerdamer": "^1.1.2",
-    "p5": "^1.4.0",
     "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-p5-wrapper": "^3.0.2",
-    "sharp": "^0.32.6",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "sharp": "^0.34.2",
     "tachyons": "^4.11.1",
     "telegraf": "^4.4.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "@parcel/core": "^2.0.0",
-    "@parcel/packager-raw-url": "^2.0.0",
-    "@parcel/service-worker": "^2.0.0",
-    "@parcel/transformer-image": "^2.0.0",
-    "@parcel/transformer-webmanifest": "^2.0.0",
-    "babel-watch": "^7.0.0",
-    "env-cmd": "^10.0.1",
-    "husky": "^7.0.0",
-    "parcel": "^2.0.0",
-    "parcel-plugin-static-files-copy": "^2.2.2",
-    "parcel-transformer-fix-star": "link:./parcel-transformer-fix-star",
-    "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0"
+    "@vitejs/plugin-react-swc": "^3.4.1",
+    "husky": "^9.0.0",
+    "prettier": "^3.0.0",
+    "pretty-quick": "^4.0.0",
+    "vite": "^6.3.5"
   }
 }
