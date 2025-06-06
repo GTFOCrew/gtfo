@@ -1,10 +1,12 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
   "name": "gtfo",
   "alias": "gtfo",
   "scope": "gtfo-crew",
   "trailingSlash": false,
   "regions": ["cdg1"],
+  "outputDirectory": "build",
   "functions": {
     "api/bot.js": {
       "includeFiles": "node_modules/mathjax/**"
