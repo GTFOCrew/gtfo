@@ -1,16 +1,16 @@
-import React from 'react'
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import 'tachyons'
 
 import Home from './views/Home'
 import './styles.css'
 
-render(<Home />, document.querySelector('#app'))
+const root = createRoot(document.querySelector('#app'))
+root.render(<Home />)
 
-if (module.hot) module.hot.accept()
+if (import.meta.hot) import.meta.hot.accept()
 
 if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
-  const sw = new URL('service-worker.js', import.meta.url)
+  const sw = new URL('./service-worker.js', import.meta.url)
   window.addEventListener('load', () =>
     navigator.serviceWorker.register(sw, { type: 'module' })
   )

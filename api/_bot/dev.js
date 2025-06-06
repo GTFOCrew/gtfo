@@ -1,4 +1,4 @@
-import createBot from '.'
+import createBot from './index.js'
 
 const bot = createBot(process.env.BOT_TOKEN_LOCAL)
 bot.launch()
