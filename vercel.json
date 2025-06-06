@@ -9,7 +9,7 @@
   "outputDirectory": "build",
   "functions": {
     "api/bot.js": {
-      "includeFiles": "node_modules/mathjax/**"
+      "includeFiles": "(node_modules/mathjax|api/_bot/data)/**"
     }
   }
 }
