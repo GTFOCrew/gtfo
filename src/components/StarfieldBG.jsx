@@ -1,8 +1,19 @@
-import { ReactP5Wrapper as P5 } from '@p5-wrapper/react'
+import { P5Canvas as P5 } from '@p5-wrapper/react'
 import { memo } from 'react'
-import PropTypes from 'prop-types'
 import { debounce } from '../fn'
 
+/**
+ * @typedef {{
+ *  stars?: number,
+ *  bg?: string,
+ *  fg?: string,
+ *  trail?: boolean
+ * }} StarfieldBGProps
+ */
+
+/**
+ * @type {import('react').NamedExoticComponent<StarfieldBGProps>}
+ */
 const StarfieldBG = memo(
   ({ stars = 400, bg = '#111', fg = '#eee', trail = false }) => (
     <P5
@@ -32,13 +43,6 @@ const StarfieldBG = memo(
     />
   )
 )
-
-StarfieldBG.propTypes = {
-  stars: PropTypes.number,
-  bg: PropTypes.string,
-  fg: PropTypes.string,
-  trail: PropTypes.bool
-}
 
 export default StarfieldBG
 

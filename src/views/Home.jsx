@@ -4,9 +4,9 @@ import { makeStyles } from '../hooks'
 const gtfoLogo = new URL('../img/gtfo.png', import.meta.url).toString()
 
 const useStyles = makeStyles({
-  container: 'code fw6',
-  logo: 'w4 w5-ns br-pill ba bw2 bw3-ns b--near-white mb4 shadow-2 pointer grow',
-  paper: 'dn db-ns'
+  container: 'code font-semibold',
+  logo: 'w-32 sm:w-64 rounded-full border-4 sm:border-8 border-gray-100 mb-8 shadow-xl cursor-pointer backface-hidden transition-transform ease-out duration-300 hover:scale-105 focus:scale-105 active:scale-90',
+  paper: 'hidden sm:block'
 })
 
 const Home = () => {

@@ -1,11 +1,20 @@
 import { memo } from 'react'
-import PropTypes from 'prop-types'
 import { makeStyles } from '../hooks'
 
+/**
+ * @typedef {{
+ *  href?: string,
+ *  children: import('react').ReactNode
+ * }} LinkProps
+ */
+
 const useStyles = makeStyles({
-  link: 'link yellow hover-near-black hover-bg-yellow bg-animate pv1 ph2 br2'
+  link: 'transition-colors ease-in text-yellow-300 hover:text-zinc-950 hover:bg-yellow-300 py-1 px-2 rounded-sm'
 })
 
+/**
+ * @type {import('react').NamedExoticComponent<LinkProps>}
+ */
 const Link = memo(({ children, href = '#' }) => {
   const styles = useStyles()
 
@@ -15,11 +24,5 @@ const Link = memo(({ children, href = '#' }) => {
     </a>
   )
 })
-
-Link.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
-    .isRequired,
-  href: PropTypes.string
-}
 
 export default Link

@@ -1,31 +1,32 @@
-import PropTypes from 'prop-types'
 import { clsx } from 'clsx'
 import { makeStyles } from '../hooks'
 
+/**
+ * @typedef {{
+ *  className?: string,
+ *  elevate?: boolean,
+ *  children: import('react').ReactNode
+ * }} PaperProps
+ */
+
 const useStyles = makeStyles(({ elevate = false, className }) => ({
   paper: clsx(
-    'near-white',
-    'bg-near-black',
-    'br3',
-    'pa3',
-    elevate && 'shadow-2',
+    'text-zinc-100',
+    'bg-zinc-950',
+    'leading-tight',
+    'rounded-lg',
+    'p-4',
+    elevate && 'shadow-lg',
     className
   )
 }))
 
+/**
+ * @param {PaperProps} param0 Props
+ */
 const Paper = ({ children, className, elevate }) => {
   const styles = useStyles({ elevate, className })
   return <div className={styles.paper}>{children}</div>
-}
-
-Paper.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.string,
-    PropTypes.node
-  ]).isRequired,
-  className: PropTypes.string,
-  elevate: PropTypes.bool
 }
 
 export default Paper
